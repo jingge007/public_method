@@ -23,7 +23,6 @@ pubilc.timer_format = function (s) {
         }
         t += sec;
     }
-    console.log(t)
     return t;
 }
 
@@ -86,4 +85,5 @@ pubilc.dateDiff = function (timestamp) {
     }
     return '刚刚';
 }
+
 
