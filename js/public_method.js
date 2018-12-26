@@ -86,4 +86,16 @@ pubilc.dateDiff = function (timestamp) {
     return '刚刚';
 }
 
+// 获取指定年份里面的每个月的开始与结束时间
+
+pubilc.getMonthDateRange = function (year, month) {
+    // 需要引入moment.js
+    let moment = require('moment');
+    let startDate = moment([year, month - 1]);
+    let endDate = moment(startDate).endOf('month');
+    console.log(startDate.toDate());
+    console.log(endDate.toDate());
+    return {start: startDate, end: endDate};
+}
+
 
