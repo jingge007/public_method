@@ -98,4 +98,15 @@ pubilc.getMonthDateRange = function (year, month) {
     return {start: startDate, end: endDate};
 }
 
+// 所有值为 '' , null , undefined 的字段，全部设置为：'--'
+pubilc.setDefault =function (obj) {
+    let _obj=JSON.parse(JSON.stringify(obj));
+    for (let key in _obj){
+        if(_obj[key]===''||_obj[key]===null||_obj[key]===undefined){
+            _obj[key]='--'
+        }
+    }
+    return _obj;
+}
+
 
